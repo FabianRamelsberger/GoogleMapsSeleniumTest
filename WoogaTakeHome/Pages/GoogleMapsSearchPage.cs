@@ -5,7 +5,8 @@ using SeleniumExtras.WaitHelpers;
 public class GoogleMapsSearchPage
 {
     private readonly IWebDriver _driver;
-    private readonly string _url = "https://www.google.com/maps";
+    // Updated URL to ensure the interface loads in English
+    private readonly string _url = "https://www.google.com/maps?hl=en";
     private IWebElement SearchInput => _driver.FindElement(By.Id("searchboxinput"));
     private IWebElement SearchButton => _driver.FindElement(By.Id("searchbox-searchbutton"));
 
@@ -20,15 +21,14 @@ public class GoogleMapsSearchPage
         _driver.Navigate().GoToUrl(_url);
     }
 
-    public void EnterSearchText(string searchText)
+    public void EnterSearchText(string searchText, string additionalDescription)
     {
-        SearchInput.SendKeys(searchText);
+        SearchInput.SendKeys(searchText + additionalDescription);
     }
 
     public void ClickSearchButton()
     {
         SearchButton.Click();
-        WaitForPageLoad();
     }
 
     public void AcceptConsentDialogue()
@@ -54,10 +54,15 @@ public class GoogleMapsSearchPage
         }
     }
 
-    private void WaitForPageLoad()
+    public void WaitForPageLoad(string term)
     {
         WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(30));
+        string multipleWordsTerm = term.Replace(' ', '+').Split(',')[0];
+        string firstWordTerm = term.Split(' ')[0];
         // This wait checks that the URL has been updated to contain the expected query.
-        wait.Until(d => _driver.Url.ToLower().Contains("eiffelturm") || d.Url.ToLower().Contains("eiffel+tower") || d.Url.ToLower().Contains("eiffel%20tower"));
+        wait.Until(d => _driver.Url.ToLower().Contains(term.ToLower()) || 
+                        _driver.Url.ToLower().Contains(multipleWordsTerm.ToLower()) ||
+                        _driver.Url.ToLower().Contains(firstWordTerm.ToLower())
+                        );
     }
 }

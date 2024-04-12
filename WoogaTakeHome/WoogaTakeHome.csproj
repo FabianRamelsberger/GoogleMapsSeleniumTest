@@ -18,7 +18,12 @@
 
     <ItemGroup>
       <Folder Include="Helpers\" />
-      <Folder Include="Resources\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Resources\searchTerms.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

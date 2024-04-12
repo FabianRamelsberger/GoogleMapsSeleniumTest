@@ -1,24 +1,49 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=56e0dac0_002D36eb_002D4997_002Da4b6_002D4cf1ae3aafe8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0da9ee1e_002D04d2_002D4e5a_002Dbe2f_002D61f16d82432c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.Search_For_Colosseum&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=103d4e7f_002D79de_002D45a9_002Dbcb6_002Dac724f18c347/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.Search_For_Colosseum&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=13e9c159_002Dccb9_002D460c_002Dbb7f_002Dfedf5be025b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=79bd9da0_002Dba32_002D4536_002Daed9_002D64b9180307b1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=14bed2a8_002D86d1_002D4b87_002D8afc_002D54be6c84f418/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8df0accc_002D6eb8_002D4596_002Da81e_002D60a1dbe612c8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f2d99e2_002D3042_002D47f7_002D82d5_002D36af6f050f07/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Locations" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ac779618_002Db691_002D4528_002D91b5_002D98219ffe295b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Solution /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ef9e2a9d_002Dc9c5_002D4823_002D806c_002D63bfe1a64233/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=78cd2c73_002D4790_002D4eb3_002D9094_002D764bf7557c26/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Search_For_Colosseum #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb44381d_002D5576_002D453b_002Db0f7_002Dc6ce07b8361b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.Search_For_Colosseum&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>
