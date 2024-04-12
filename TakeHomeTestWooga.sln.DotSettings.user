@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=56e0dac0_002D36eb_002D4997_002Da4b6_002D4cf1ae3aafe8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=79bd9da0_002Dba32_002D4536_002Daed9_002D64b9180307b1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8df0accc_002D6eb8_002D4596_002Da81e_002D60a1dbe612c8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ac779618_002Db691_002D4528_002D91b5_002D98219ffe295b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ef9e2a9d_002Dc9c5_002D4823_002D806c_002D63bfe1a64233/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocation #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.SearchForEiffelTower_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
