@@ -25,14 +25,14 @@
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=78cd2c73_002D4790_002D4eb3_002D9094_002D764bf7557c26/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Search_For_Colosseum #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=78cd2c73_002D4790_002D4eb3_002D9094_002D764bf7557c26/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb44381d_002D5576_002D453b_002Db0f7_002Dc6ce07b8361b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eb44381d_002D5576_002D453b_002Db0f7_002Dc6ce07b8361b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Search_For_Colosseum" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests.Search_For_Colosseum&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	

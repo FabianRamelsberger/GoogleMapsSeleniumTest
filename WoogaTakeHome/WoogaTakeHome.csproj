@@ -17,10 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Helpers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="Resources\searchTerms.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>

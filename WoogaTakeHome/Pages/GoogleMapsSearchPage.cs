@@ -10,7 +10,6 @@ public class GoogleMapsSearchPage
     private IWebElement SearchInput => _driver.FindElement(By.Id("searchboxinput"));
     private IWebElement SearchButton => _driver.FindElement(By.Id("searchbox-searchbutton"));
 
-
     public GoogleMapsSearchPage(IWebDriver driver)
     {
         _driver = driver;
