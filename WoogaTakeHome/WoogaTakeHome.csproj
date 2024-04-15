@@ -20,6 +20,9 @@
       <None Update="Resources\searchTerms.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+	  <None Update="Drivers\*.*">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </None>
     </ItemGroup>
 
 </Project>

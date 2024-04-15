@@ -1,31 +1,44 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
 using WoogaTakeHome.Resources;
 
-[TestFixture]
+[TestFixture(WebDriverSetup.BrowserType.Firefox)]
+[TestFixture(WebDriverSetup.BrowserType.Chrome)]
+[TestFixture(WebDriverSetup.BrowserType.Edge)]
 public class GoogleMapsSearchTests
 {
     private IWebDriver _driver;
     private GoogleMapsSearchPage _searchPage;
     private List<string> _searchTerms;
+    private WebDriverSetup.BrowserType _browserType;
 
     private static int EIFEL_TOWER_INDEX = 0;
     private static int STATUE_OF_LIBERTY_INDEX = 1;
     private static int COLOSSEUM_INDEX = 2;
     private static int GREAT_WALL_OF_CHINA_INDEX = 3;
-
-    [SetUp]
-    public void SetUp()
+    
+    public GoogleMapsSearchTests(WebDriverSetup.BrowserType browserType)
     {
-        ChromeOptions options = new ChromeOptions();
-        options.AddArgument("--start-maximized");
-        _driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options);
-        _searchPage = new GoogleMapsSearchPage(_driver);
-        _searchTerms = TestData.LoadSearchTerms();
+        _browserType = browserType;
+    }
+
+    [OneTimeSetUp]
+    public void GlobalSetUp()
+    {
+        try
+        {
+            _driver = WebDriverSetup.InitializeDriver(_browserType);
+            _searchPage = new GoogleMapsSearchPage(_driver);
+            _searchTerms = TestData.LoadSearchTerms();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Failed to initialize WebDriver: " + ex.Message);
+            throw;  // Re-throwing is important to prevent further execution with invalid state.
+        }
     }
     
+   
     [Test]
     public void SearchForEiffelTower_ShouldDisplayCorrectLocation()
     {
@@ -77,6 +90,8 @@ public class GoogleMapsSearchTests
     
     private void SearchForTermAndAssert(string term)
     {
+        if (_driver == null) throw new InvalidOperationException("WebDriver is not initialized.");
+        
         _searchPage.Navigate();
         _searchPage.AcceptConsentDialogue();
         EnterSearchClickWaitForLoad(term);
@@ -90,9 +105,13 @@ public class GoogleMapsSearchTests
         _searchPage.WaitForPageLoad(term);
     }
     
-    [TearDown]
-    public void TearDown()
+    [OneTimeTearDown]
+    public void GlobalTearDown()
     {
-        _driver.Quit();
+        if (_driver != null)
+        {
+            _driver.Quit();
+            _driver = null;  // Nullify after quitting to prevent misuse.
+        }
     }
 }
