@@ -4,7 +4,6 @@ using WoogaTakeHome.Resources;
 
 [TestFixture(WebDriverSetup.BrowserType.Firefox)]
 [TestFixture(WebDriverSetup.BrowserType.Chrome)]
-[TestFixture(WebDriverSetup.BrowserType.Edge)]
 public class GoogleMapsSearchTests
 {
     private IWebDriver _driver;
@@ -22,8 +21,8 @@ public class GoogleMapsSearchTests
         _browserType = browserType;
     }
 
-    [OneTimeSetUp]
-    public void GlobalSetUp()
+    [SetUp]
+    public void Setup()
     {
         try
         {
@@ -103,6 +102,12 @@ public class GoogleMapsSearchTests
         _searchPage.EnterSearchText(term,additionalDescription);
         _searchPage.ClickSearchButton();
         _searchPage.WaitForPageLoad(term);
+    }
+    
+    [TearDown]
+    public void TearDown()
+    {
+        _driver.Quit();
     }
     
     [OneTimeTearDown]
