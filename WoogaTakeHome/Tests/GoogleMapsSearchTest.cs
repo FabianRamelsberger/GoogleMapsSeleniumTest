@@ -31,7 +31,7 @@ public class GoogleMapsSearchTests
         {
             _driver = WebDriverSetup.InitializeDriver(_browserType);
             _searchPage = new GoogleMapsSearchPage(_driver, _languageIdentifier);
-            _resultCompareTerms = TestData.LoadResultCompareTerms(_languageIdentifier);
+            _resultCompareTerms = TestDataConverter.LoadResultCompareTerms(_languageIdentifier);
         }
         catch (Exception ex)
         {
@@ -40,10 +40,6 @@ public class GoogleMapsSearchTests
         }
     }
     
-   //test cases loaded via Json
-
-   #region JSON Test cases
-
    [Test]
    public void SearchForEiffelTower_ShouldDisplayCorrectLocation()
    {
@@ -52,9 +48,7 @@ public class GoogleMapsSearchTests
        Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
 
-   #endregion
-
-   #region Multiple annotation test cases
+   // Multiple annotation test cases
    [TestCase("Eiffel Tower", ExpectedResult = true)]
    [TestCase("Eiffel", ExpectedResult = false)]
    [TestCase("Eiffel Towwer", ExpectedResult = true)] // Intentional misspelling -> should correct itself
@@ -117,8 +111,6 @@ public class GoogleMapsSearchTests
        bool foundTermInUrl = _searchPage.SearchForTerm(term);
        Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
-   
-   #endregion
    
     [TearDown]
     public void TearDown()

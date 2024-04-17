@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 public class GoogleMapsSearchPage
@@ -27,7 +26,6 @@ public class GoogleMapsSearchPage
             _url = _urlDE;
         }
     }
-
         
     public bool SearchForTerm(string searchTerm, string resultCompareTerm = "")
     {

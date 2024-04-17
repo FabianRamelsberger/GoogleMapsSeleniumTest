@@ -1,9 +1,8 @@
-﻿using System.Reflection;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace WoogaTakeHome.Resources;
 
-public class TestData
+public static class TestDataConverter
 {
     public static List<string> LoadResultCompareTerms(string languageIdentifier)
     {
