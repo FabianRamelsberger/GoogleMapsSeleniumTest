@@ -8,8 +8,7 @@ public class WebDriverSetup
     public enum BrowserType
     {
         Chrome,
-        Firefox,
-        Edge
+        Firefox
     }
 
     public static IWebDriver InitializeDriver(BrowserType browserType)
@@ -33,12 +32,6 @@ public class WebDriverSetup
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 // Add Firefox-specific options here
                 driver = new FirefoxDriver(firefoxOptions);
-                break;
-
-            case BrowserType.Edge:
-                EdgeOptions edgeOptions = new EdgeOptions();
-                // Add Edge-specific options here
-                driver = new EdgeDriver(edgeOptions);
                 break;
 
             default:
