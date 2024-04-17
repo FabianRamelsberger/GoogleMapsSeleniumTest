@@ -10,7 +10,7 @@
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1579f0bb_002Df457_002D47b4_002D8855_002D815cd06b28b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GoogleMapsSearchTests #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1579f0bb_002Df457_002D47b4_002D8855_002D815cd06b28b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GoogleMapsSearchTests #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
@@ -28,7 +28,7 @@
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Chrome).SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=937ac48b_002Dca88_002D43ad_002Db438_002D2c3615592311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GoogleMapsSearchTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=937ac48b_002Dca88_002D43ad_002Db438_002D2c3615592311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GoogleMapsSearchTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;

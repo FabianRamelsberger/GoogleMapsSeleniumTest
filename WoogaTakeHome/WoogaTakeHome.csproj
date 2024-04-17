@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Resources\searchTerms.json">
+      <None Update="Resources\resultCompareTerms.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
 	  <None Update="Drivers\*.*">

@@ -1,0 +1,20 @@
+﻿{
+  "EN": {
+    "locations": [
+    "Eiffel Tower",
+    "Statue of Liberty",
+    "Colosseum",
+    "Great Wall of China",
+    "Berlin Olympic park"
+  ]
+},
+  "DE": {
+    "locations": [
+      "Eiffelturm",
+      "Freiheitsstatue",
+      "Kolosseum",
+      "Chinesische Mauer",
+      "Olympiapark Berlin"
+    ]
+  }
+}

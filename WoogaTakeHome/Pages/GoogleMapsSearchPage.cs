@@ -6,16 +6,49 @@ public class GoogleMapsSearchPage
 {
     private readonly IWebDriver _driver;
     // Updated URL to ensure the interface loads in English
-    private readonly string _url = "https://www.google.com/maps?hl=en";
+    private readonly string _url;
+    private readonly string _urlEN = "https://www.google.com/maps?hl=en";
+    private readonly string _urlDE = "https://www.google.com/maps?hl=de";
     private IWebElement SearchInput => _driver.FindElement(By.Id("searchboxinput"));
     private IWebElement SearchButton => _driver.FindElement(By.Id("searchbox-searchbutton"));
 
-    public GoogleMapsSearchPage(IWebDriver driver)
+    public GoogleMapsSearchPage(IWebDriver driver, string languageIdentifier)
     {
         _driver = driver;
+        // This could be extended in its own class, when supporting multiple languages
+        if (languageIdentifier.Equals("EN"))
+        {
+            _url = _urlEN;
+        }
+        else if(languageIdentifier.Equals("DE"))
+        {
+            _url = _urlDE;
+        }
     }
 
-    public void Navigate()
+        
+    public bool SearchForTerm(string searchTerm, string resultCompareTerm = "")
+    {
+        if (_driver == null) throw new InvalidOperationException("WebDriver is not initialized.");
+
+        // if there is no result term given we just search for the search term in the URL
+        if (resultCompareTerm.Equals(""))
+        {
+            resultCompareTerm = searchTerm;
+        }
+        Navigate();
+        AcceptConsentDialogue();
+        return EnterSearchTermReturnValidationCheck(searchTerm,resultCompareTerm);
+    }
+
+    private bool EnterSearchTermReturnValidationCheck(string searchTerm, string resultCompareTerm)
+    {
+        EnterSearchText(searchTerm);
+        ClickSearchButton();
+        return WaitForPageLoadReturnValidationCheck(resultCompareTerm);
+    }
+    
+    private void Navigate()
     {
         _driver.Navigate().GoToUrl(_url);
     }
@@ -25,12 +58,12 @@ public class GoogleMapsSearchPage
         SearchInput.SendKeys(searchText);
     }
 
-    public void ClickSearchButton()
+    private void ClickSearchButton()
     {
         SearchButton.Click();
     }
 
-    public void AcceptConsentDialogue()
+    private void AcceptConsentDialogue()
     {
         // Create WebDriverWait instance with a timeout (e.g., 10 seconds)
         WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
@@ -52,8 +85,8 @@ public class GoogleMapsSearchPage
             Console.WriteLine("Element not found within the specified wait time.");
         }
     }
-
-    public bool WaitForPageLoadReturnValidationCheck(string resultCompareTerm)
+    
+    private bool WaitForPageLoadReturnValidationCheck(string resultCompareTerm)
     {
         // space is replaced with + in urls
         string multipleWordsTerm = resultCompareTerm.Replace(' ', '+').Split(',')[0];
@@ -71,4 +104,5 @@ public class GoogleMapsSearchPage
             return false;
         }
     }
+
 }
