@@ -45,8 +45,8 @@ public class GoogleMapsSearchTests
    public void SearchForEiffelTower_ShouldDisplayCorrectLocation()
    {
        var term = _searchTerms[EIFEL_TOWER_INDEX];
-       bool valid = SearchForTerm(term);
-       Assert.That(valid, $"could not find {term} in URL"); 
+       bool foundTermInUrl = SearchForTerm(term);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
 
    #endregion
@@ -62,13 +62,13 @@ public class GoogleMapsSearchTests
        return serchTermInURL;
    }
    
-   [TestCase("Olympiapark", ExpectedResult = false)] // to many results
-   [TestCase("Olympiapark München", ExpectedResult = true)] // Intentional misspelling -> should correct itself
-   public bool SearchForOlympiaParkMuenchen_ShouldDisplayCorrectLocation(string searchTerm)
+   [TestCase("Olympic park", ExpectedResult = false)] // to many results
+   [TestCase("Berlin Olympic parc", ExpectedResult = true)] // Intentional misspelling -> should correct itself
+   public bool SearchForOlympicParkBerlin_ShouldDisplayCorrectLocation(string searchTerm)
    {
-       string resultCompareTerm = "Eiffel Tower";
-       bool serchTermInURL = SearchForTerm(searchTerm,resultCompareTerm);
-       return serchTermInURL;
+       string resultCompareTerm = "Berlin Olympic park";
+       bool foundTermInUrl = SearchForTerm(searchTerm, resultCompareTerm);
+       return foundTermInUrl;
    }
    
    // positive test
@@ -76,39 +76,43 @@ public class GoogleMapsSearchTests
    public void SearchForStatueOfLibertyWithExtraDescription_ShouldDisplayCorrectLocation()
    {
        var term = _searchTerms[STATUE_OF_LIBERTY_INDEX] + ", near New York"; // does deliver
-       SearchForTerm(term, term);
-       Assert.That(_driver.PageSource.Contains(term.Split(',')[0]), $"could not find {term} in URL"); 
+       bool foundTermInUrl = SearchForTerm(term);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
    
-   // Negative test
+   // Edgecase multiple locatoins test
    [Test]
    public void SearchForStatueOfLiberty_ShouldDisplayMultipleLocations()
    {
        var term = _searchTerms[STATUE_OF_LIBERTY_INDEX];
-       SearchForTerm(term,term);
-       Assert.That(_driver.PageSource.Contains(term.Split(',')[0]) == false, $"could not find {term} in URL"); 
+       string resultCompareTerm = term.Replace(" ", "+");
+       bool foundTermInUrl = SearchForTerm(term, resultCompareTerm);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
    
    [Test]
    public void SearchForGreatWallOfChina_ShouldDisplayCorrectLocation()
    {
        var term = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
-       SearchForTerm(term, term);    
+       bool foundTermInUrl = SearchForTerm(term);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL");   
    }
    
    [Test]
    public void SearchForGreatWallUsingCommonName_ShouldDisplayCorrectLocation()
    {
-       var term = "Chinas Great Wall";
-       var serchTermInURL = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
-       SearchForTerm(term, serchTermInURL);
+       string term = "Chinas Great Wall";
+       string resultCompareTerm = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
+       bool foundTermInUrl = SearchForTerm(term, resultCompareTerm);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
 
    [Test]
    public void SearchForColosseum_ShouldDisplayCorrectLocation()
    {
        var term = _searchTerms[COLOSSEUM_INDEX];
-       SearchForTerm(term, term);
+       bool foundTermInUrl = SearchForTerm(term);
+       Assert.That(foundTermInUrl, $"could not find {term} in URL"); 
    }
    
    #endregion
