@@ -14,10 +14,6 @@ public class WebDriverSetup
     public static IWebDriver InitializeDriver(BrowserType browserType)
     {
         IWebDriver driver;
-
-        // Get the path to the directory of the executing assembly
-        string driverPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Drivers");
-        
         switch (browserType)
         {
             case BrowserType.Chrome:
