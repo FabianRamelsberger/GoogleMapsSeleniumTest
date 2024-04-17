@@ -1,10 +1,29 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=051b1dd0_002D1899_002D46b2_002Db5a7_002D0ceebd664760/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Firefox).SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Chrome).SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0da9ee1e_002D04d2_002D4e5a_002Dbe2f_002D61f16d82432c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_For_Colosseum #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=937ac48b_002Dca88_002D43ad_002Db438_002D2c3615592311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GoogleMapsSearchTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2e62d741_002D1d7a_002D48df_002Da5ce_002Db4e046523118/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForOlympiaParkMuenchen_ShouldDisplayCorrectLocation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Firefox).SearchForOlympiaParkMuenchen_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Chrome).SearchForOlympiaParkMuenchen_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6912aa2e_002D341e_002D43bb_002Da437_002D57aef39145fa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Firefox).SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Chrome).SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=937ac48b_002Dca88_002D43ad_002Db438_002D2c3615592311/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GoogleMapsSearchTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
@@ -17,9 +36,15 @@
 	
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eba50148_002D636c_002D4658_002Dad75_002D4ea5b7bebc6f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GoogleMapsSearchTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eba50148_002D636c_002D4658_002Dad75_002D4ea5b7bebc6f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GoogleMapsSearchTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f6dcccb4_002Da9cf_002D4167_002Dbebc_002Deeadbfab686f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SearchForEiffelTower_ShouldDisplayCorrectLocatation" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Firefox).SearchForEiffelTower_ShouldDisplayCorrectLocatation&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C098C25E-76B4-4FDC-A938-453967389E09::net8.0::GoogleMapsSearchTests(Chrome).SearchForEiffelTower_ShouldDisplayCorrectLocatation&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	

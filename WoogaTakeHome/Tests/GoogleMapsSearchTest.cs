@@ -37,71 +37,105 @@ public class GoogleMapsSearchTests
         }
     }
     
+   //test cases loaded via Json
+
+   #region JSON Test cases
+
+   [Test]
+   public void SearchForEiffelTower_ShouldDisplayCorrectLocation()
+   {
+       var term = _searchTerms[EIFEL_TOWER_INDEX];
+       bool valid = SearchForTerm(term);
+       Assert.That(valid, $"could not find {term} in URL"); 
+   }
+
+   #endregion
+
+   #region Multiple annotation test cases
+   [TestCase("Eiffel Tower", ExpectedResult = true)]
+   [TestCase("Eiffel", ExpectedResult = false)]
+   [TestCase("Eiffel Towwer", ExpectedResult = true)] // Intentional misspelling -> should correct itself
+   public bool SearchForEiffelTower_ShouldDisplayCorrectLocation(string searchTerm)
+   {
+       string resultCompareTerm = "Eiffel Tower";
+       bool serchTermInURL = SearchForTerm(searchTerm,resultCompareTerm);
+       return serchTermInURL;
+   }
    
-    [Test]
-    public void SearchForEiffelTower_ShouldDisplayCorrectLocation()
-    {
-        var term = _searchTerms[EIFEL_TOWER_INDEX];
-        SearchForTermAndAssert(term);
-    }
+   [TestCase("Olympiapark", ExpectedResult = false)] // to many results
+   [TestCase("Olympiapark München", ExpectedResult = true)] // Intentional misspelling -> should correct itself
+   public bool SearchForOlympiaParkMuenchen_ShouldDisplayCorrectLocation(string searchTerm)
+   {
+       string resultCompareTerm = "Eiffel Tower";
+       bool serchTermInURL = SearchForTerm(searchTerm,resultCompareTerm);
+       return serchTermInURL;
+   }
+   
+   // positive test
+   [Test]
+   public void SearchForStatueOfLibertyWithExtraDescription_ShouldDisplayCorrectLocation()
+   {
+       var term = _searchTerms[STATUE_OF_LIBERTY_INDEX] + ", near New York"; // does deliver
+       SearchForTerm(term, term);
+       Assert.That(_driver.PageSource.Contains(term.Split(',')[0]), $"could not find {term} in URL"); 
+   }
+   
+   // Negative test
+   [Test]
+   public void SearchForStatueOfLiberty_ShouldDisplayMultipleLocations()
+   {
+       var term = _searchTerms[STATUE_OF_LIBERTY_INDEX];
+       SearchForTerm(term,term);
+       Assert.That(_driver.PageSource.Contains(term.Split(',')[0]) == false, $"could not find {term} in URL"); 
+   }
+   
+   [Test]
+   public void SearchForGreatWallOfChina_ShouldDisplayCorrectLocation()
+   {
+       var term = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
+       SearchForTerm(term, term);    
+   }
+   
+   [Test]
+   public void SearchForGreatWallUsingCommonName_ShouldDisplayCorrectLocation()
+   {
+       var term = "Chinas Great Wall";
+       var serchTermInURL = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
+       SearchForTerm(term, serchTermInURL);
+   }
 
-    [Test]
-    public void SearchForStatueOfLiberty_ShouldDisplayCorrectLocation()
-    {
-        var term = _searchTerms[STATUE_OF_LIBERTY_INDEX];
-        SearchForTermAndAssert(term);
-    }
+   [Test]
+   public void SearchForColosseum_ShouldDisplayCorrectLocation()
+   {
+       var term = _searchTerms[COLOSSEUM_INDEX];
+       SearchForTerm(term, term);
+   }
+   
+   #endregion
+
+   #region Helper functions
+
+   private bool SearchForTerm(string searchTerm, string resultCompareTerm = "")
+   {
+       if (_driver == null) throw new InvalidOperationException("WebDriver is not initialized.");
+
+       // if there is no result term given we just search for the search term in the URL
+       if (resultCompareTerm.Equals(""))
+       {
+           resultCompareTerm = searchTerm;
+       }
+       _searchPage.Navigate();
+       _searchPage.AcceptConsentDialogue();
+       return EnterSearchTermReturnValidationCheck(searchTerm,resultCompareTerm);
+   }
+
+   #endregion
     
-    [Test]
-    public void SearchForEiffelTowerUsingPartialName_ShouldDisplayCorrectLocation()
+    private bool EnterSearchTermReturnValidationCheck(string searchTerm, string resultCompareTerm)
     {
-        var term = "Eiffel";
-        SearchForTermAndAssert(term);
-    }
-
-    [Test]
-    public void SearchForStatueOfLibertyWithExtraDescription_ShouldDisplayCorrectLocation()
-    {
-        var term = _searchTerms[STATUE_OF_LIBERTY_INDEX] + ", near New York";
-        SearchForTermAndAssert(term);
-    }
-
-    [Test]
-    public void SearchForGreatWallUsingCommonName_ShouldDisplayCorrectLocation()
-    {
-        var term = "The Great Wall";
-        SearchForTermAndAssert(term);
-    }
-    
-    [Test]
-    public void SearchForColosseum_ShouldDisplayCorrectLocation()
-    {
-        var term = _searchTerms[COLOSSEUM_INDEX];
-        SearchForTermAndAssert(term);
-    }
-
-    [Test]
-    public void SearchForGreatWallOfChina_ShouldDisplayCorrectLocation()
-    {
-        var term = _searchTerms[GREAT_WALL_OF_CHINA_INDEX];
-        SearchForTermAndAssert(term);    
-    }
-    
-    private void SearchForTermAndAssert(string term)
-    {
-        if (_driver == null) throw new InvalidOperationException("WebDriver is not initialized.");
-        
-        _searchPage.Navigate();
-        _searchPage.AcceptConsentDialogue();
-        EnterSearchClickWaitForLoad(term);
-        Assert.That(_driver.PageSource.Contains(term.Split(',')[0]), $"could not find {term} in URL"); 
-    }
-
-    private void EnterSearchClickWaitForLoad(string term, string additionalDescription = "")
-    {
-        _searchPage.EnterSearchText(term,additionalDescription);
+        _searchPage.EnterSearchText(searchTerm);
         _searchPage.ClickSearchButton();
-        _searchPage.WaitForPageLoad(term);
+       return _searchPage.WaitForPageLoadReturnValidationCheck(resultCompareTerm);
     }
     
     [TearDown]

@@ -20,9 +20,9 @@ public class GoogleMapsSearchPage
         _driver.Navigate().GoToUrl(_url);
     }
 
-    public void EnterSearchText(string searchText, string additionalDescription)
+    public void EnterSearchText(string searchText)
     {
-        SearchInput.SendKeys(searchText + additionalDescription);
+        SearchInput.SendKeys(searchText);
     }
 
     public void ClickSearchButton()
@@ -53,15 +53,22 @@ public class GoogleMapsSearchPage
         }
     }
 
-    public void WaitForPageLoad(string term)
+    public bool WaitForPageLoadReturnValidationCheck(string resultCompareTerm)
     {
-        WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(30));
-        string multipleWordsTerm = term.Replace(' ', '+').Split(',')[0];
-        string firstWordTerm = term.Split(' ')[0];
-        // This wait checks that the URL has been updated to contain the expected query.
-        wait.Until(d => _driver.Url.ToLower().Contains(term.ToLower()) || 
-                        _driver.Url.ToLower().Contains(multipleWordsTerm.ToLower()) ||
-                        _driver.Url.ToLower().Contains(firstWordTerm.ToLower())
-                        );
+        // space is replaced with + in urls
+        string multipleWordsTerm = resultCompareTerm.Replace(' ', '+').Split(',')[0];
+        try
+        {
+            // This wait checks that the URL has been updated to contain the expected query.
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            wait.Until(d => d.Url.ToLower().Contains(resultCompareTerm.ToLower()) ||
+                            d.Url.ToLower().Contains(multipleWordsTerm.ToLower()));
+            return true;
+        }
+        catch (WebDriverTimeoutException)
+        {
+            // for negative tests or timeouts
+            return false;
+        }
     }
 }
