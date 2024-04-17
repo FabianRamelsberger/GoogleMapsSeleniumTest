@@ -23,18 +23,13 @@ Development Environment: Rider IDE
 ## Setup and Running Tests
 ### Test Devices
 Windows 11 on a laptop or macOS Sonoma 14.4.1 on a Mac
-### Starting the Selenium Server
-bash
-java -jar selenium-server-4.19.1.jar node --port 5555
-java -jar selenium-server-4.19.1.jar node --hub http://localhost:4444/grid/register -browser browserName=firefox,maxInstances=5 -browser browserName=chrome,maxInstances=5
-
 ### Running Tests
 Ensure that the NUnit framework is set up in your development environment. Execute the tests using the standard NUnit test running procedures in your IDE or through a command line interface.
 #### CI Integration
 The project was integrated with a local Jenkins for continuous testing. 
 #### Test Results
 All tests are logged and detailed in the Jenkins output, ensuring traceability and immediate feedback on failures.
-Bestanden! Fehler: 0, erfolgreich: 22, übersprungen: 0, gesamt: 22, Dauer: 3 m 23 s - WoogaTakeHome.dll (net8.0)
+Passed! Errors: 0, successful: 22, skipped: 0, total: 22, duration: 3 m 23 s - WoogaTakeHome.dll (net8.0)
 
 # Documentation
 Further documentation includes code comments, usage instructions, and a detailed test case specification. This documentation is crucial for maintenance and future development.
