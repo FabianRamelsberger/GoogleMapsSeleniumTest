@@ -9,6 +9,8 @@ public class GoogleMapsSearchPage
     private readonly string _url;
     private readonly string _urlEN = "https://www.google.com/maps?hl=en";
     private readonly string _urlDE = "https://www.google.com/maps?hl=de";
+    private const float SECONDS_TO_WAIT_FOR_URL = 15f;
+
     private IWebElement SearchInput => _driver.FindElement(By.Id("searchboxinput"));
     private IWebElement SearchButton => _driver.FindElement(By.Id("searchbox-searchbutton"));
 
@@ -93,7 +95,7 @@ public class GoogleMapsSearchPage
         try
         {
             // This wait checks that the URL has been updated to contain the expected query.
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(SECONDS_TO_WAIT_FOR_URL));
             wait.Until(d => d.Url.ToLower().Contains(resultCompareTerm.ToLower()) ||
                             d.Url.ToLower().Contains(multipleWordsTerm.ToLower()));
             return true;
@@ -104,5 +106,4 @@ public class GoogleMapsSearchPage
             return false;
         }
     }
-
 }
